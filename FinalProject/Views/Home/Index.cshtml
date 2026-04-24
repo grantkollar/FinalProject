@@ -1,8 +1,42 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center mb-5">
+    <h1 class="display-3">Ski Hobby</h1>
+    <p class="lead">Exploring the mountains, one run at a time.</p>
+    <a asp-controller="Ski" asp-action="Index" class="btn btn-primary btn-lg me-2">Learn About Skiing</a>
+    <a asp-controller="Ski" asp-action="Resorts" class="btn btn-outline-primary btn-lg">Browse Resorts</a>
+</div>
+
+<hr />
+
+<div class="row mt-4">
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <h5 class="card-title">About Skiing</h5>
+                <p class="card-text">Discover what alpine skiing is all about, from trail ratings to why it's one of the greatest sports in the world.</p>
+                <a asp-controller="Ski" asp-action="Index" class="btn btn-sm btn-primary">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <h5 class="card-title">Top Resorts</h5>
+                <p class="card-text">Browse a database of top U.S. ski resorts with stats on vertical drop, run count, and snowfall averages.</p>
+                <a asp-controller="Ski" asp-action="Resorts" class="btn btn-sm btn-primary">View Resorts</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <h5 class="card-title">Gear Guide</h5>
+                <p class="card-text">From skis and boots to helmets and layers, everything you need to know about ski equipment.</p>
+                <a asp-controller="Ski" asp-action="Gear" class="btn btn-sm btn-primary">View Gear</a>
+            </div>
+        </div>
+    </div>
 </div>
