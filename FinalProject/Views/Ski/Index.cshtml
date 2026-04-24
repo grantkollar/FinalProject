@@ -1,0 +1,72 @@
+@{
+    ViewData["Title"] = "About Skiing";
+}
+
+<div class="text-center mb-4">
+    <h1 class="display-4">About Skiing</h1>
+    <p class="lead">One of the world's most exhilarating winter sports.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>What Is Alpine Skiing?</h2>
+        <p>
+            Alpine skiing, also called downhill skiing, involves descending snow-covered slopes on skis
+            attached to ski boots via bindings. Skiers use poles for balance and to initiate turns.
+            It is both a recreational activity and a competitive sport featured in the Winter Olympics.
+        </p>
+        <p>
+            Runs are typically categorized by difficulty:
+        </p>
+        <ul>
+            <li><span class="badge bg-success">Green Circle</span>, Beginner / Easy</li>
+            <li><span class="badge bg-primary">Blue Square</span>, Intermediate</li>
+            <li><span class="badge bg-dark">Black Diamond</span>, Advanced</li>
+            <li><span class="badge bg-danger">Double Black Diamond</span>, Expert</li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <h2>Why I Love It</h2>
+        <p>
+            There is nothing quite like the feeling of carving down a freshly groomed run on a clear morning
+            with powder on the sides and the mountains stretching out in every direction. Skiing combines
+            physical challenge, technique, and pure speed in a way no other sport does.
+        </p>
+        <p>
+            Beyond the skiing itself, the mountain culture, the lodges, the apres-ski, the camaraderie,
+            makes every trip memorable.
+        </p>
+    </div>
+</div>
+
+<hr />
+
+<div class="row mt-3">
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Resorts</h5>
+                <p class="card-text">Explore a database of top ski resorts across the United States, including vertical drop, run count, and average snowfall.</p>
+                <a asp-controller="Ski" asp-action="Resorts" class="btn btn-primary">View Resorts</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Gear</h5>
+                <p class="card-text">Learn about the essential equipment every skier needs, from skis and boots to helmets and layers.</p>
+                <a asp-controller="Ski" asp-action="Gear" class="btn btn-primary">View Gear</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">About Me</h5>
+                <p class="card-text">Read more about me, my skiing background, and how I built this site.</p>
+                <a asp-controller="Home" asp-action="About" class="btn btn-primary">About Me</a>
+            </div>
+        </div>
+    </div>
+</div>

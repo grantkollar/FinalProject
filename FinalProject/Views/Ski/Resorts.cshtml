@@ -1,0 +1,48 @@
+@model IEnumerable<FinalProject.Models.Resort>
+
+@{
+    ViewData["Title"] = "Ski Resorts";
+}
+
+<h1>@ViewData["Title"]</h1>
+<p class="lead">A look at some of the best ski resorts in the United States.</p>
+
+<table class="table table-striped table-hover mt-3">
+    <thead class="table-dark">
+        <tr>
+            <th>Resort</th>
+            <th>State</th>
+            <th>Vertical Drop (ft)</th>
+            <th>Number of Runs</th>
+            <th>Avg Annual Snowfall (in)</th>
+            <th>Best For</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var resort in Model)
+        {
+            <tr>
+                <td>@resort.Name</td>
+                <td>@resort.State</td>
+                <td>@resort.VerticalDrop.ToString("N0")</td>
+                <td>@resort.NumberOfRuns</td>
+                <td>@resort.AnnualSnowfall</td>
+                <td>
+                    @{
+                        var badgeClass = resort.Difficulty switch
+                        {
+                            "Beginner" => "bg-success",
+                            "Intermediate" => "bg-primary",
+                            "Advanced" => "bg-dark",
+                            "Expert" => "bg-danger",
+                            _ => "bg-secondary"
+                        };
+                    }
+                    <span class="badge @badgeClass">@resort.Difficulty</span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p class="text-muted"><small>Data sourced from publicly available resort statistics.</small></p>
