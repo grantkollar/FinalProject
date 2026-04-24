@@ -1,7 +1,14 @@
+using FinalProject.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// register the database context so controllers can use it
+builder.Services.AddDbContext<SkiContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SkiContext")));
 
 var app = builder.Build();
 
